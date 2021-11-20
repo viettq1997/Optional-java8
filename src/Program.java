@@ -3,18 +3,18 @@ import java.util.Optional;
 public class Program {
     public static void main(String[] args) {
         Person person = new Person("james", null);
-//        String email = person
-//                .getEmail()
-//                .map(String::toLowerCase)
-//                .orElse("Email not provided");
-//        System.out.println(email);
+       String email = person
+               .getEmail()
+               .map(String::toLowerCase)
+               .orElse("Email not provided");
+       System.out.println(email);
 
-        if (person.getEmail().isPresent()) {
-            String email = person.getEmail().get();
-            System.out.println(email.toLowerCase());
-        } else {
-            System.out.println("Email not provided");
-        }
+        // if (person.getEmail().isPresent()) {
+        //     String email = person.getEmail().get();
+        //     System.out.println(email.toLowerCase());
+        // } else {
+        //     System.out.println("Email not provided");
+        // }
     }
 }
 
